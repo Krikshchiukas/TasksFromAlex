@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    min-width: 550px;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(206, 86, 86));
+    font-family: "Poppins", sans-serif;
+    color: rgb(27, 20, 20);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Remove margin and padding from the list */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 5px
+}
+
+/* Style the list item */
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.4s;
+    color: rgb(143, 133, 114);
+    /* Make this list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list item to different color */
+
+ul#categories {
+    background-color: #c25d5d;
+}
+
+ul li:nth-child(odd) {
+    background: rgb(240, 245, 247);
+}
+
+/* Darker background on hover */
+
+ul li:hover {
+    background: #ddd;
+}
+
+/* Task 3  */
+
+.task-3 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img {
+    height: 200px;
+    width: 300px;
+}
+
+span {
+    color: #c25d5d;
+    font-weight: bold;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    box-shadow: #c25d5d;
+    border-radius: 4px;
+    background-color: rgb(208, 234, 243);
+    color: rgb(26, 11, 11);
+    transition: width 0.8s ease-in-out;
+}
+
+input[type=text]:focus {
+    background-color: rgb(193, 229, 241);
+    border: 3px solid #555;
+    width: 100%;
+    font-size: larger;
+}
+    #name-input {
+        font-weight: 1.2em;
+    }
