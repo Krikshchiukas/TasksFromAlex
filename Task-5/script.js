@@ -1,11 +1,17 @@
-
 const nameInput = document.querySelector('#name-input');
 const nameOutput = document.querySelector('#name-output');
-nameInput.addEventListener('input', updateValue);
 
-function updateValue(e) {
-  nameOutput.textContent = e.target.value;
+nameInput.addEventListener('input', function(e) {
+  updateName(e.target.value);
+});
+
+function updateName(name) {
+  nameOutput.textContent = name || 'stranger';
 }
+
+updateName('');
+
+
 
 // Задание 5
 // Напиши скрипт который, при наборе текста в инпуте input#name-input (событие input), подставляет его текущее значение в span#name-output. Если инпут пустой, в спане должна отображаться строка 'незнакомец'.
