@@ -1,19 +1,40 @@
-
 let counterValue = 0;
-let spanValue = document.querySelector('span#value');
-const decrement = document.querySelector('[data-action="decrement"]');
-const increment = document.querySelector('[data-action="increment"]');
 
-decrement.onclick = function() {
-  counterValue -= 1;
-  spanValue.innerHTML = counterValue;
+const counterValueSpan = document.querySelector('span#value');
+const incrementBtn = document.querySelector('[data-action="increment"]');
+const decrementBtn = document.querySelector('[data-action="decrement"]');
+const resetBtn = document.querySelector('[data-action="reset"]');
+
+function increment() {
+  counterValue++;
 }
 
-increment.onclick = function() {
-  counterValue += 1;
-  spanValue.innerHTML = counterValue;
+function decrement() {
+  counterValue--;
 }
 
+function reset() {
+  counterValue = 0;
+}
+
+function refreshValue() {
+  counterValueSpan.innerHTML = counterValue;
+}
+
+incrementBtn.onclick = function() {
+  increment();
+  refreshValue();
+}
+
+decrementBtn.onclick = function() {
+  decrement();
+  refreshValue();
+}
+
+resetBtn.onclick = function() {
+  reset();
+  refreshValue();
+}
 
 
 // Задание 4
