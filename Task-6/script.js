@@ -1,19 +1,18 @@
+const input = document.querySelector('input#validation-input');
+const input2 = document.querySelector('input#validation-input2');
 
-const inputForm = document.querySelector('input#validation-input');
+input.addEventListener('focusout', validateInput);
+input2.addEventListener('focusout', validateInput);
 
-inputForm.addEventListener('mouseout', validateInput);
+function validateInput(e) {
+  const targetInput = e.target;
 
-function validateInput() {
-  let input = document.getElementById('validation-input').value;
-
-  if (input.length < 6 || input.length > 6) {
-    inputForm.className = 'invalid';
-    return false;
-  } {
-    inputForm.className = 'valid';
-    return true;
+  if (targetInput.value.length != targetInput.dataset.length) {
+    targetInput.className = 'invalid';
+  } else {
+    targetInput.className = 'valid';
   }
-};
+}
 
 // Задание 6
 // Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое на правильное количество символов.
