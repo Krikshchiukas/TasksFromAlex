@@ -101,14 +101,14 @@ input {
 
 /* TASK 6 */
 
-#validation-input {
+input {
     border: 3px solid #bdbdbd;
 }
 
-#validation-input.valid {
+input.valid {
     border-color: #4caf50;
 }
 
-#validation-input.invalid {
+input.invalid {
     border-color: #f44336;
 }
